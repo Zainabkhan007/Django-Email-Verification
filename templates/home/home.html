@@ -1,0 +1,134 @@
+{% extends "basic.html" %}
+
+{% block title %} Home Page{% endblock title %} 
+{% block homeactive %} active {% endblock homeactive %}
+{% comment %} {% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static "home.css" %}">
+{% endblock css %} {% endcomment %}
+
+{% block css %}
+<style>
+  .col-md-8 {
+    flex: 0 0 auto;
+    width: 52.666667%;
+}
+
+
+.wrapper .static-txt{
+/* text-align: center; */
+color: rgb(102, 98, 98);
+font-size: 40px;
+font-weight: 500;
+}
+.wrapper .static-txt1{
+/* text-align: center; */
+color: rgb(102, 98, 98);
+font-size: 40px;
+font-weight: 500;
+margin-left: 127px
+}
+.wrapper .dynamic-txts{
+margin-left: 15px;
+height: 90px;
+line-height: 90px;
+overflow: hidden;
+position: relative;
+}
+.dynamic-txts li{
+
+list-style: none;
+font-size: 67px;
+font-weight: 500;
+position: relative;
+color:rgb(102, 98, 98);
+top: 0;
+animation:slide 12s steps(4) infinite;
+}
+
+@keyframes slide {
+ 100%{
+  top: -360px;
+} 
+ 
+}
+.dynamic-txts li span{
+position: relative;
+margin: 5px 0;
+line-height: 69px;
+}
+.dynamic-txts li span::after{
+content: "";
+position: absolute;
+left: 0;
+height: 100%;
+width: 100%;
+background:white;
+border-left: 1px solid #3a3838;
+animation: typing 3s steps(10) infinite;
+/* z-index: -1; */
+}
+
+@keyframes typing {
+40%, 60%{
+left: calc(100% + 30px);
+}
+100%{
+left: 0;
+}
+}
+
+.small-right-image {
+float: right;
+width: 611px;
+margin-right: -78px;
+margin-top: -7px;
+}
+</style>
+{% endblock css %}
+
+
+
+
+
+
+{% block body %}
+
+
+
+
+<div class="container my-5 ">
+  <div class="wrapper">
+    <div class="static-txt">Welcome to Programming Blog </div>
+    <div class="static-txt1 ">Learn About</div>
+ 
+    <div>
+          <ul class="dynamic-txts ">
+    
+  <li><span>Python Programming</span></li>
+  <li><span>C Programming</span></li>
+  <li><span>Java Programming</span></li>
+  <li><span>C++ Programming</span></li>
+      
+  
+  
+  </ul>
+
+</div>
+
+  </div> 
+  <div class="container">
+  
+    <img  src="static\blog\images\best-programming-blogs.jpg" 
+    class= "small-right-image" alt="" srcset="">
+      </div>
+
+        <p class="col-md-8 fs-4 mt-5 ">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>
+        <a href="/blog"> <button class="btn btn-primary btn-lg mt-3" type="button">Go to Blog</button></a>
+      </div>
+
+    
+     
+
+    
+{% endblock body %}

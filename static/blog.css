@@ -1,0 +1,18 @@
+.border {
+    border: var(--bs-border-width) var(--bs-border-style) #9ea3a9 !important;
+  }
+  .row {
+      --bs-gutter-x: -24.5rem;
+      background-color: #f7f5f5;
+  }
+  .my-5 {
+    margin-right: 209px;
+      margin-left: -134px;
+  }
+  body {
+    background-color: #e3e3e3;
+  }
+  .shadow-sm {
+      box-shadow: -4px -1rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  }
+  

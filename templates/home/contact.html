@@ -1,0 +1,52 @@
+{% extends "basic.html" %}
+
+{% block title %} Contact Page{% endblock title %} 
+{% block contactactive %} active {% endblock contactactive %}
+{% load static %}
+{% block css %}
+<style>
+  .container{
+    background-color:#8b8a8a ;
+    padding: 23px;
+
+  }
+  .form{
+    padding-top: 23px;
+  }
+  .form-control{
+    background-color: #e6e3e3;
+  }
+</style>
+{% endblock css %}
+{% block body %}
+<div class="container my-4">
+<form  class="form" method="post" action="/contact">{% csrf_token %} 
+  <div class="mb-3">
+    <label for="exampleInputName" class="form-label">Your Name</label>
+    <input type="name" name="name" class="form-control" id="exampleInputName" >
+  </div>
+
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Your Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp">
+    
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleInputPhone" class="form-label">Your Phone Number</label>
+      <input type="phone" class="form-control" id="exampleInputPhone" name="phone">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputdesc" class="form-label">How may we help you?</label>
+      <br>
+      
+      <textarea class="form-control" name="desc" id="desc" cols="99" rows="6"></textarea>
+    </div>
+   
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+{% endblock body %}
+
