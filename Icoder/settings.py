@@ -164,6 +164,5 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'Your email '
 EMAIL_HOST_PASSWORD ='EMAIL App password'
 
-# DEFAULT_FROM_EMAIL='Celery <freelancewriter3377@gmail.com>'
-#celery settings
+
 
